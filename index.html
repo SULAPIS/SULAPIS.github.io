@@ -1,65 +1,32 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Today's Date</title>
-    </head>
-    <body>
-        <script type="text/javascript" src="javascript.js"></script>
-        <script type="text/javascript" src="imgjs.js"></script>
-        <style type="text/css">@import url("style.css");</style>
-        <div class="example">
-        <table><tr><td>
-        <div style="width:120px;height:100px;position:relative;left:58px;top:50px;">
-        <div id="dig1" class="dig">1</div>
-        <div id="dig2" class="dig">2</div>
-        <div id="dig3" class="dig">3</div>
-        <div id="dig4" class="dig">4</div>
-        <div id="dig5" class="dig">5</div>
-        <div id="dig6" class="dig">6</div>
-        <div id="dig7" class="dig">7</div>
-        <div id="dig8" class="dig">8</div>
-        <div id="dig9" class="dig">9</div>
-        <div id="dig10" class="dig">10</div>
-        <div id="dig11" class="dig">11</div>
-        <div id="dig12" class="dig">12</div>
-    
-        <div id="hour1" class="hour"></div>
-        <div id="hour2" class="hour"></div>
-        <div id="hour3" class="hour"></div>
-        <div id="hour4" class="hour"></div>
-    
-        <div id="min1" class="min"></div>
-        <div id="min2" class="min"></div>
-        <div id="min3" class="min"></div>
-        <div id="min4" class="min"></div>
-        <div id="min5" class="min"></div>
-    
-        <div id="sec1" class="sec"></div>
-        <div id="sec2" class="sec"></div>
-        <div id="sec3" class="sec"></div>
-        <div id="sec4" class="sec"></div>
-        <div id="sec5" class="sec"></div>
-        <div id="sec6" class="sec"></div>
-        </div>
-        </td></tr></table>
-        </div>
-        <from>
-            <input type="button" value="Push me" onclick="debug('clicked:\t'+ (++n) + ' time');">
-        </from>
 
-        <a href="#"
-            onmousedown="document.help.src='scr/img/pearl.jpg'"
-            onmouseout="document.help.src='scr/img/su.jpg'">
-        <img name="help" src="scr/img/su.jpg" width="200" height="200">
-        </a>
+<head>
+    <meta charset="utf-8" />
+    <title>Today's Date</title>
+    <script type="text/javascript" src="javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-        
+<p>
+    <from>
+        <input type="button" id="bot1" class="button" value="G" onclick=" cc(this);">
+        <input type="button" class="button button1" value="MI">
+        <input type="button" class="button button2" value="G">
+    </from>
 
-        <form>
-            <img name="pingu" src="scr/img/pingu/0.jpg">
-            <input type="button" value="正放" onclick="clearTimeout(timeoutId);timeoutId=null;animatee();">
-            <input type="button" value="倒放" onclick="clearTimeout(timeoutId);timeoutId=null;animatef();">
-            <input type="button" value="暂停" onclick="if(timeoutId){ clearTimeout(timeoutId);}timeoutId=null;">
-        </form>
+    <a href="#" onmousedown="document.help.src='img/pearl.jpg'" onmouseout="document.help.src='img/su.jpg'">
+        <img name="help" src="img/su.jpg" width="200" height="200">
+    </a>
+
+    <img id="bul" onclick="changeImage()" src="img/bulboff.gif" width="100" height="180">
+    <p><img name="pingu" src="img/pingu/0.jpg"></p>
+    <form>
+
+        <input type="button" class="playButton" value="正放" onclick="clearTimeout(timeoutId);timeoutId=null;animatee();">
+        <input type="button" class="playButton" value="倒放" onclick="clearTimeout(timeoutId);timeoutId=null;animatef();">
+        <input type="button" class="playButton" value="暂停" onclick="if(timeoutId){ clearTimeout(timeoutId);}timeoutId=null;">
+    </form>
+
     </body>
-</html>
+
+    </html>
